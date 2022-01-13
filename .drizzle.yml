@@ -1,5 +1,6 @@
 stages:
   - name: build
+    debug: true
     execute:
       - go build ./cmd/finance-scraper
   - name: test
