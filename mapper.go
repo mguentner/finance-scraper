@@ -45,12 +45,18 @@ func (ym *YahooMapper) Map(result ScrapeResult) (Quote, error) {
 		return Quote{}, errors.Wrapf(err, "failed to parse insider ownership value %s", result.InsiderOwnership)
 	}
 
+	outstandingShares, err := parseFloat(result.OutstandingShares)
+	if err != nil {
+		return Quote{}, errors.Wrapf(err, "failed to parse outstanding shares value %s", result.OutstandingShares)
+	}
+
 	return Quote{
 		PERatio:          peRatio,
 		EnterpriseValue:  enterpriseValue,
 		MarketCap:        marketCap,
 		ReturnOnEquity:   returnOnEquity,
 		InsiderOwnership: insiderOwnership,
+		OutstandingShares: outstandingShares,
 	}, nil
 }
 

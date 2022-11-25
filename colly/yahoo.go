@@ -21,6 +21,7 @@ const (
 	keyEnterpriseValue  = "enterpriseValue"
 	keyReturnOnEquity   = "returnOnEquity"
 	keyInsiderOwnership = "insiderOwnership"
+	keyOutstandingShares = "outstandingShares"
 )
 
 // Collector is a Web Scraper.
@@ -123,6 +124,11 @@ func (c *Collector) Scrape(symbol string) (finance.ScrapeResult, error) {
 				scrapeStack.PushBack(&scrapeValue{
 					key: keyInsiderOwnership,
 				})
+			} else if strings.HasPrefix(strings.ToLower(span.Text()), "shares outstanding") {
+				nextIsValue = true
+				scrapeStack.PushBack(&scrapeValue{
+					key: keyOutstandingShares,
+				})
 			}
 		}
 	})
@@ -145,5 +151,6 @@ func (c *Collector) Scrape(symbol string) (finance.ScrapeResult, error) {
 		MarketCap:        keysToValue[keyMarketCap],
 		ReturnOnEquity:   keysToValue[keyReturnOnEquity],
 		InsiderOwnership: keysToValue[keyInsiderOwnership],
+		OutstandingShares: keysToValue[keyOutstandingShares],
 	}, nil
 }

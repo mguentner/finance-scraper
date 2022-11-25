@@ -76,6 +76,7 @@ func (da *DefaultAnalyzer) Analyze(quote Quote) (string, error) {
 	builder.WriteString(fmt.Sprintf("Market Cap %s\n", FmtWithSuffix(quote.MarketCap, p)))
 	builder.WriteString(fmt.Sprintf("Return on Equity %s\n", FmtWithSuffix(quote.ReturnOnEquity, p)))
 	builder.WriteString(fmt.Sprintf("Insider Ownership %s\n", FmtWithSuffix(quote.InsiderOwnership, p)))
+	builder.WriteString(fmt.Sprintf("Outstanding Shares %s\n", FmtWithSuffix(quote.OutstandingShares, p)))
 	return builder.String(), nil
 }
 
