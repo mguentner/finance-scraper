@@ -1,4 +1,4 @@
-module github.com/hill-daniel/finance-scraper
+module github.com/mguentner/finance-scraper
 
 go 1.17
 
