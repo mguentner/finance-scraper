@@ -4,7 +4,7 @@ import (
 	"container/list"
 	"fmt"
 	"github.com/gocolly/colly"
-	"github.com/hill-daniel/finance-scraper"
+	"github.com/mguentner/finance-scraper"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 	"strings"

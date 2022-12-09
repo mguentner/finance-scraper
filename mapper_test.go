@@ -3,8 +3,8 @@ package finance_test
 import (
 	"testing"
 
-	"github.com/hill-daniel/finance-scraper"
-	"github.com/hill-daniel/finance-scraper/test"
+	"github.com/mguentner/finance-scraper"
+	"github.com/mguentner/finance-scraper/test"
 )
 
 func Test(t *testing.T) {

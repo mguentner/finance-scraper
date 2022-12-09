@@ -1,8 +1,8 @@
 package finance_test
 
 import (
-	"github.com/hill-daniel/finance-scraper"
-	"github.com/hill-daniel/finance-scraper/test"
+	"github.com/mguentner/finance-scraper"
+	"github.com/mguentner/finance-scraper/test"
 	"golang.org/x/text/language"
 	"golang.org/x/text/message"
 	"strings"

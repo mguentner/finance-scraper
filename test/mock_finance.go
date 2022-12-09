@@ -10,7 +10,7 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	finance "github.com/hill-daniel/finance-scraper"
+	finance "github.com/mguentner/finance-scraper"
 )
 
 // MockScraper is a mock of Scraper interface.

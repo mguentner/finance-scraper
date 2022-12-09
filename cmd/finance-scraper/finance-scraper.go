@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"github.com/hill-daniel/finance-scraper"
-	"github.com/hill-daniel/finance-scraper/colly"
+	"github.com/mguentner/finance-scraper"
+	"github.com/mguentner/finance-scraper/colly"
 	log "github.com/sirupsen/logrus"
 	"os"
 )
